@@ -24,3 +24,9 @@ canvas.addEventListener('mousemove', draw)
 canvas.addEventListener('mousedown', () => isDrawing = true);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
+
+
+const button = document.querySelector("button");
+const instructions = document.querySelector(".instructions")
+
+button.addEventListener("click", () => instructions.style.display = "none");
