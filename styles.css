@@ -37,7 +37,7 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 30px;
+    top: 50px;
     right: 10px;
     padding: 20px;
 }
@@ -54,6 +54,13 @@ button {
 
 .changeBackground {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
+}
+
+.playPause {
+    position: absolute;
+    top: 10px;
+    right: 200px;
+    padding: 5px;
 }

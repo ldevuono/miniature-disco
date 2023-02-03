@@ -12,7 +12,6 @@ let lastY = 0;
 
 function draw(e) {
     if (!isDrawing) return; //stop the function from running when they are not moused down
-    console.log(e);
     ctx.beginPath();
     ctx.moveTo(lastX, lastY);
     ctx.lineTo(e.offsetX, e.offsetY);
@@ -39,3 +38,25 @@ const changeBackground = function () {
 };
 
 change.addEventListener("click", changeBackground);
+
+
+// document.querySelector("audio").play();
+
+const audio = document.querySelector("audio");
+const playPauseButton = document.querySelector(".playPause");
+let count = 0;
+
+function playPause() {
+    if (count === 0) {
+        count = 1;
+        audio.play();
+        playPauseButton.innerHTML = "&#9208;";
+    } else {
+        count = 0;
+        audio.pause();
+        playPauseButton.innerHTML = "&#9658;";
+
+    }
+}
+
+playPauseButton.addEventListener("click", playPause);
