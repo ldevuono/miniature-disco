@@ -8,6 +8,13 @@ body {
     font-size: 125%;
 }
 
+.forest {
+    background-image: url(./assets/forest.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .sun {
     width: 200px;
     height: 200px;
@@ -30,14 +37,23 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 10px;
+    top: 30px;
     right: 10px;
     padding: 20px;
 }
 
 button {
+    cursor: pointer;
+}
+
+.close {
     position: absolute;
     top: 10px;
     right: 10px;
-    cursor: pointer;
+}
+
+.changeBackground {
+    position: absolute;
+    top: 0;
+    right: 0;
 }

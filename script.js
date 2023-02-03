@@ -26,7 +26,16 @@ canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
 
 
-const button = document.querySelector("button");
-const instructions = document.querySelector(".instructions")
+const closeIt = document.querySelector(".close");
+const instructions = document.querySelector(".instructions");
+const change = document.querySelector(".changeBackground");
+const body = document.querySelector("body")
 
-button.addEventListener("click", () => instructions.style.display = "none");
+closeIt.addEventListener("click", () => instructions.style.display = "none");
+
+
+const changeBackground = function () {
+    body.classList.toggle("forest");
+};
+
+change.addEventListener("click", changeBackground);
