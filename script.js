@@ -68,3 +68,21 @@ const clearCanvas = function () {
 const clear = document.querySelector(".clear");
 
 clear.addEventListener("click", clearCanvas);
+
+
+const modal = document.querySelector(".modal")
+const credits = document.querySelector(".credits");
+
+const closeModal = document.querySelector(".closeModal")
+
+const showCredits = function () {
+    modal.style.display = "block";
+}
+
+const closeCredits = function () {
+    modal.style.display = "none";
+}
+
+credits.addEventListener("click", showCredits);
+
+closeModal.addEventListener("click", closeCredits);

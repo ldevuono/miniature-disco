@@ -6,6 +6,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 125%;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .forest {
@@ -26,6 +27,10 @@ body {
     left: -100px;
 }
 
+.bg {
+    display: none;
+}
+
 .instructions {
     background-color: black;
     opacity: 0.7;
@@ -33,7 +38,8 @@ body {
     color: white;
     width: 300px;
     height: 200px;
-    font-size: 1.5rem;
+    font-size: .9rem;
+    line-height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,8 +50,11 @@ body {
 }
 
 button {
-    cursor: pointer;
     border: 1px solid black;
+    font-family: 'Press Start 2P', cursive;
+    font-size: .4rem;
+    padding: 5px;
+    z-index: 10;
 }
 
 .close {
@@ -58,20 +67,77 @@ button {
     position: absolute;
     top: 10px;
     right: 10px;
-    padding: 5px;
 }
 
 .playPause {
     position: absolute;
     top: 10px;
-    right: 290px;
-    padding: 5px;
-    z-index: 10;
+    right: 320px;
 }
 
 .clear {
     position: absolute;
     top: 10px;
-    right: 200px;
-    padding: 5px;
+    right: 215px;
+}
+
+/* MODAL */
+
+
+.credits {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+button:hover,
+button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+
+    .instructions {
+        width: 200px;
+        font-size: .7rem;
+    }
+
+    .bg {
+        display: block;
+    }
+
+    .changeBg {
+        display: none;
+    }
+
+    .clear {
+        right: 50px;
+    }
+
+    .playPause {
+        right: 150px;
+    }
 }
