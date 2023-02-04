@@ -1,3 +1,4 @@
+// canvas
 const canvas = document.querySelector("#draw");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
@@ -16,7 +17,6 @@ function draw(e) {
     ctx.moveTo(lastX, lastY);
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
-
 }
 
 canvas.addEventListener('mousemove', draw)
@@ -24,7 +24,7 @@ canvas.addEventListener('mousedown', () => isDrawing = true);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
 
-
+// top buttons
 const closeIt = document.querySelector(".close");
 const instructions = document.querySelector(".instructions");
 const change = document.querySelector(".changeBackground");
@@ -41,7 +41,7 @@ const changeBackground = function () {
 change.addEventListener("click", changeBackground);
 
 
-
+// audio
 const audio = document.querySelector("audio");
 const playPauseButton = document.querySelector(".playPause");
 let count = 0;
@@ -69,7 +69,7 @@ const clear = document.querySelector(".clear");
 
 clear.addEventListener("click", clearCanvas);
 
-
+// modal
 const modal = document.querySelector(".modal")
 const credits = document.querySelector(".credits");
 
