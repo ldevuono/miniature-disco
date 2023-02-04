@@ -2,7 +2,7 @@ const canvas = document.querySelector("#draw");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-ctx.strokeStyle = "#fffc33";
+ctx.strokeStyle = "#ffd000";
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 
@@ -35,12 +35,12 @@ closeIt.addEventListener("click", () => instructions.style.display = "none");
 
 const changeBackground = function () {
     body.classList.toggle("forest");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 };
 
 change.addEventListener("click", changeBackground);
 
 
-// document.querySelector("audio").play();
 
 const audio = document.querySelector("audio");
 const playPauseButton = document.querySelector(".playPause");
@@ -60,3 +60,11 @@ function playPause() {
 }
 
 playPauseButton.addEventListener("click", playPause);
+
+const clearCanvas = function () {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+const clear = document.querySelector(".clear");
+
+clear.addEventListener("click", clearCanvas);
