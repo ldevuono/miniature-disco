@@ -11,7 +11,7 @@ body {
 
 .forest {
     background-image: url(./assets/forest.jpg);
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -117,7 +117,6 @@ button:focus {
 }
 
 @media (max-width: 500px) {
-
     .instructions {
         width: 200px;
         font-size: .7rem;
