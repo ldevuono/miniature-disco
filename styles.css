@@ -8,12 +8,8 @@ body {
     font-size: 125%;
     font-family: 'Press Start 2P', cursive;
     overflow: hidden;
-}
-
-
-canvas {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .forest {
@@ -142,6 +138,6 @@ button:focus {
     }
 
     .playPause {
-        right: 150px;
+        right: 120px;
     }
 }
