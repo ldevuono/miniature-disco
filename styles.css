@@ -7,6 +7,13 @@ body {
     background-size: cover;
     font-size: 125%;
     font-family: 'Press Start 2P', cursive;
+    overflow: hidden;
+}
+
+
+canvas {
+    width: 100vw;
+    height: 100vh;
 }
 
 .forest {
@@ -72,13 +79,13 @@ button {
 .playPause {
     position: absolute;
     top: 10px;
-    right: 320px;
+    right: 310px;
 }
 
 .clear {
     position: absolute;
     top: 10px;
-    right: 215px;
+    right: 230px;
 }
 
 /* MODAL */
