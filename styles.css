@@ -12,11 +12,9 @@ body {
     height: 100%;
 }
 
-.forest {
-    background-image: url(./assets/forest.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+canvas {
+    width: 100%;
+    height: 100%;
 }
 
 .sun {
@@ -78,7 +76,7 @@ button {
     right: 310px;
 }
 
-.clear {
+#clear {
     position: absolute;
     top: 10px;
     right: 230px;

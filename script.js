@@ -33,12 +33,34 @@ const body = document.querySelector("body")
 closeIt.addEventListener("click", () => instructions.style.display = "none");
 
 
-const changeBackground = function () {
-    body.classList.toggle("forest");
+const background = [
+    "./assets/canyon.jpg",
+    "./assets/desert.jpg",
+    "./assets/forest.jpg",
+    "./assets/lake.jpg",
+    "./assets/meadow.jpg"
+]
+
+let counter = 0;
+function changeBackground() {
+    counter += 1;
+    if (counter > background.length - 1) {
+        counter = 0;
+    }
+    console.log(`canvas width: ${canvas.width}, height: ${canvas.height}`);
+    body.style.backgroundImage = `url(${background[counter]})`
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-};
+}
 
 change.addEventListener("click", changeBackground);
+
+const clearCanvas = function () {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+const clear = document.getElementById("clear");
+
+clear.addEventListener("click", clearCanvas);
 
 
 // audio
@@ -55,19 +77,11 @@ function playPause() {
         count = 0;
         audio.pause();
         playPauseButton.innerHTML = "&#9658;";
-
     }
 }
 
 playPauseButton.addEventListener("click", playPause);
 
-const clearCanvas = function () {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-const clear = document.querySelector(".clear");
-
-clear.addEventListener("click", clearCanvas);
 
 // modal
 const modal = document.querySelector(".modal")
